@@ -1,0 +1,378 @@
+[
+  {
+    "uri": "features/specs/API_WebMotors.feature",
+    "id": "garantir-que-serão-validadas-através-pela-api-marcas,-modelos-e-versões-através-do-verbo-post.",
+    "keyword": "Funcionalidade",
+    "name": "Garantir que serão validadas através pela API marcas, modelos e versões através do verbo POST.",
+    "description": "",
+    "line": 5,
+    "tags": [
+      {
+        "name": "@apis",
+        "line": 4
+      }
+    ],
+    "comments": [
+      {
+        "value": "#enconding: utf-8",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "garantir-que-serão-validadas-através-pela-api-marcas,-modelos-e-versões-através-do-verbo-post.;realizar-consulta-através-do-id-das-marcas",
+        "keyword": "Cenário",
+        "name": "Realizar consulta através do ID das marcas",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@apis",
+            "line": 4
+          },
+          {
+            "name": "@marcas_api",
+            "line": 7
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que realizo uma requisição das marcas",
+            "line": 9,
+            "output": [
+              "[{\"ID\":1,\"Name\":\"Chevrolet\"},{\"ID\":2,\"Name\":\"Honda\"},{\"ID\":3,\"Name\":\"Ford\"}]",
+              "200"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_marca.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 309192400
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "valido que a resposta da API é igual a '200'",
+            "line": 10,
+            "output": [
+              "O retorno do código é igual a 200"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_marca.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26114900
+            }
+          }
+        ]
+      },
+      {
+        "id": "garantir-que-serão-validadas-através-pela-api-marcas,-modelos-e-versões-através-do-verbo-post.;realizar-consulta-de-modelos-através-de-seus-id´s",
+        "keyword": "Cenário",
+        "name": "Realizar consulta de modelos através de seus id´s",
+        "description": "",
+        "line": 13,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@apis",
+            "line": 4
+          },
+          {
+            "name": "@modelo_api",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que realize a consulta a versão do veículo passando o id \"2\"",
+            "line": 14,
+            "output": [
+              "[{\"MakeID\":2,\"ID\":4,\"Name\":\"City\"},{\"MakeID\":2,\"ID\":5,\"Name\":\"CRV\"},{\"MakeID\":2,\"ID\":6,\"Name\":\"Fit\"}]",
+              "200"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_modelo.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 457711500
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "valido que a resposta da API é igual a '200'",
+            "line": 15,
+            "output": [
+              "O retorno do código é igual a 200"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_marca.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96900
+            }
+          }
+        ]
+      },
+      {
+        "id": "garantir-que-serão-validadas-através-pela-api-marcas,-modelos-e-versões-através-do-verbo-post.;realizar-consulta-através-a-versão-do-meu-veículo",
+        "keyword": "Cenário",
+        "name": "Realizar consulta através a versão do meu veículo",
+        "description": "",
+        "line": 18,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@apis",
+            "line": 4
+          },
+          {
+            "name": "@versao_api",
+            "line": 17
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que realize a consulta a versão do veículo passando o id \"2\" no endpoint",
+            "line": 19,
+            "output": [
+              "200",
+              "[{\"ModelID\":2,\"ID\":11,\"Name\":\"1.5 DX 16V FLEX 4P AUTOMÁTICO\"},{\"ModelID\":2,\"ID\":12,\"Name\":\"1.5 LX 16V FLEX 4P MANUAL\"},{\"ModelID\":2,\"ID\":13,\"Name\":\"2.0 EXL 4X4 16V GASOLINA 4P AUTOMÁTICO\"},{\"ModelID\":2,\"ID\":14,\"Name\":\"1.8 16V EVO FLEX FREEDOM OPEN EDITION AUTOMÁTICO\"},{\"ModelID\":2,\"ID\":15,\"Name\":\"1.0 MPI EL 8V FLEX 4P MANUAL\"}]"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_versao.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 289569800
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "valido que a resposta da API é igual a '200'",
+            "line": 20,
+            "output": [
+              "O retorno do código é igual a 200"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_marca.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82400
+            }
+          }
+        ]
+      },
+      {
+        "id": "garantir-que-serão-validadas-através-pela-api-marcas,-modelos-e-versões-através-do-verbo-post.;realizar-consulta-através-veículos-pelas-paginas-do-site",
+        "keyword": "Cenário",
+        "name": "Realizar consulta através veículos pelas paginas do site",
+        "description": "",
+        "line": 23,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@apis",
+            "line": 4
+          },
+          {
+            "name": "@pagina_api",
+            "line": 22
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que faça um requisição para a pagina \"1\" do site da webmotors",
+            "line": 24,
+            "output": [
+              "200",
+              "[{\"ID\":1,\"Make\":\"Honda\",\"Model\":\"City\",\"Version\":\"2.0 EXL 4X4 16V GASOLINA 4P AUTOMÁTICO\",\"Image\":\"http://desafioonline.webmotors.com.br/content/img/01.jpg\",\"KM\":0,\"Price\":\"59000,00\",\"YearModel\":2018,\"YearFab\":2017,\"Color\":\"Azul\"},{\"ID\":2,\"Make\":\"Mitsubishi\",\"Model\":\"Lancer\",\"Version\":\"2.0 EVO 4P AUTOMÁTICO\",\"Image\":\"http://desafioonline.webmotors.com.br/content/img/02.jpg\",\"KM\":47500,\"Price\":\"49000,00\",\"YearModel\":2012,\"YearFab\":2012,\"Color\":\"Branco\"},{\"ID\":3,\"Make\":\"Honda\",\"Model\":\"Fit\",\"Version\":\"1.4 LXL 16V FLEX 4P AUTOMÁTICO\",\"Image\":\"http://desafioonline.webmotors.com.br/content/img/03.jpg\",\"KM\":0,\"Price\":\"78000,00\",\"YearModel\":2018,\"YearFab\":2018,\"Color\":\"Preto\"},{\"ID\":4,\"Make\":\"Mitsubishi\",\"Model\":\"Lancer\",\"Version\":\"2.0 EVO 4P AUTOMÁTICO\",\"Image\":\"http://desafioonline.webmotors.com.br/content/img/04.jpg\",\"KM\":12900,\"Price\":\"59000,00\",\"YearModel\":2016,\"YearFab\":2015,\"Color\":\"Vermelho\"},{\"ID\":5,\"Make\":\"Honda\",\"Model\":\"Fit\",\"Version\":\"1.4 LXL 16V FLEX 4P AUTOMÁTICO\",\"Image\":\"http://desafioonline.webmotors.com.br/content/img/05.jpg\",\"KM\":12000,\"Price\":\"55000,00\",\"YearModel\":2016,\"YearFab\":2016,\"Color\":\"Azul\"},{\"ID\":6,\"Make\":\"Chevrolet\",\"Model\":\"Agile\",\"Version\":\"1.4 MPFI EFFECT 8V FLEX 4P AUTOMATIZADO\",\"Image\":\"http://desafioonline.webmotors.com.br/content/img/06.jpg\",\"KM\":12000,\"Price\":\"37000,00\",\"YearModel\":2014,\"YearFab\":2013,\"Color\":\"Vermelho\"},{\"ID\":7,\"Make\":\"Chevrolet\",\"Model\":\"Agile\",\"Version\":\"1.4 MPFI EFFECT 8V FLEX 4P AUTOMATIZADO\",\"Image\":\"http://desafioonline.webmotors.com.br/content/img/07.jpg\",\"KM\":0,\"Price\":\"45000,00\",\"YearModel\":2018,\"YearFab\":2017,\"Color\":\"Cinza\"},{\"ID\":8,\"Make\":\"Ford\",\"Model\":\"Ecosport\",\"Version\":\"1.6 FREESTYLE 16V FLEX 4P MANUAL\",\"Image\":\"http://desafioonline.webmotors.com.br/content/img/08.jpg\",\"KM\":93000,\"Price\":\"45000,00\",\"YearModel\":2013,\"YearFab\":2012,\"Color\":\"Branca\"},{\"ID\":9,\"Make\":\"Chevrolet\",\"Model\":\"Agile\",\"Version\":\"1.4 MPFI EFFECT 8V FLEX 4P AUTOMATIZADO\",\"Image\":\"http://desafioonline.webmotors.com.br/content/img/06.jpg\",\"KM\":12000,\"Price\":\"37000,00\",\"YearModel\":2014,\"YearFab\":2013,\"Color\":\"Vermelho\"},{\"ID\":10,\"Make\":\"Honda\",\"Model\":\"Fit\",\"Version\":\"1.4 LXL 16V FLEX 4P AUTOMÁTICO\",\"Image\":\"http://desafioonline.webmotors.com.br/content/img/05.jpg\",\"KM\":12000,\"Price\":\"55000,00\",\"YearModel\":2016,\"YearFab\":2016,\"Color\":\"Azul\"}]"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_pagina.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 431790800
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "valido que a resposta da API é igual a '200'",
+            "line": 25,
+            "output": [
+              "O retorno do código é igual a 200"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_marca.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130000
+            }
+          }
+        ]
+      },
+      {
+        "id": "garantir-que-serão-validadas-através-pela-api-marcas,-modelos-e-versões-através-do-verbo-post.;realizar-consulta-de-modelos-com-parâmetros-inválidos",
+        "keyword": "Cenário",
+        "name": "Realizar consulta de modelos com parâmetros inválidos",
+        "description": "",
+        "line": 28,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@apis",
+            "line": 4
+          },
+          {
+            "name": "@err_modelo",
+            "line": 27
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu pesquise um carros da marca honda informando id inválido 'M'",
+            "line": 29,
+            "output": [
+              "400"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_err_api.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 393559300
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "valido que a resposta da API é igual a '400'",
+            "line": 30,
+            "output": [
+              "O retorno do código é igual a 400"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_marca.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83500
+            }
+          }
+        ]
+      },
+      {
+        "id": "garantir-que-serão-validadas-através-pela-api-marcas,-modelos-e-versões-através-do-verbo-post.;realizar-consulta-de-versão-de-veículo-com-parâmetros-inválidos",
+        "keyword": "Cenário",
+        "name": "Realizar consulta de versão de veículo com parâmetros inválidos",
+        "description": "",
+        "line": 33,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@apis",
+            "line": 4
+          },
+          {
+            "name": "@err_versao",
+            "line": 32
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que é informado a versão do veículo passando parametro id inválido 'V'",
+            "line": 34,
+            "output": [
+              "400"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_err_api.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 326853600
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "valido que a resposta da API é igual a '400'",
+            "line": 35,
+            "output": [
+              "O retorno do código é igual a 400"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_marca.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85900
+            }
+          }
+        ]
+      },
+      {
+        "id": "garantir-que-serão-validadas-através-pela-api-marcas,-modelos-e-versões-através-do-verbo-post.;realizar-consulta-de-paginado-com-parâmetros-inválidos",
+        "keyword": "Cenário",
+        "name": "Realizar consulta de paginado com parâmetros inválidos",
+        "description": "",
+        "line": 38,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@apis",
+            "line": 4
+          },
+          {
+            "name": "@err_pagina",
+            "line": 37
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que é informado uma requisição com um pagina inválida: \"P\"",
+            "line": 39,
+            "output": [
+              "400"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_err_api.rb:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 298503700
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "valido que a resposta da API é igual a '400'",
+            "line": 40,
+            "output": [
+              "O retorno do código é igual a 400"
+            ],
+            "match": {
+              "location": "features/step_definitions/wm_marca.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 145200
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+{
+    "ruby.rubocop.configFilePath": "force-exclusion",
+    "ruby.rubocop.executePath": "force-exclusion"
+}
